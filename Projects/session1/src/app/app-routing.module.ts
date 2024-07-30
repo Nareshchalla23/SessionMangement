@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UrlDemoComponent } from './Components/url-demo/url-demo.component';
 import { BrowserStorageHostComponent } from './Components/browser-storage-host/browser-storage-host.component';
 import { loadRemoteModule } from '@angular-architects/module-federation';
+import { CookieDemoHostComponent } from './Components/cookie-demo-host/cookie-demo-host.component';
 
 const routes: Routes = [
   { 
@@ -16,6 +17,14 @@ const routes: Routes = [
   {
     path: 'browser-storage',
     component: BrowserStorageHostComponent,
+    canActivate: [() => {
+      console.log('[Router] Attempting to activate browser-storage route');
+      return true;
+    }]
+  },
+  {
+    path: 'cookie-demo-host',
+    component:  CookieDemoHostComponent,
     canActivate: [() => {
       console.log('[Router] Attempting to activate browser-storage route');
       return true;

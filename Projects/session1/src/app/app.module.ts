@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UrlDemoComponent } from './Components/url-demo/url-demo.component';
 import { BrowserStorageHostComponent } from './Components/browser-storage-host/browser-storage-host.component';
 import { Router, NavigationEnd, NavigationError, NavigationCancel, NavigationStart } from '@angular/router';
+import { CookieDemoHostComponent } from './Components/cookie-demo-host/cookie-demo-host.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     UrlDemoComponent,
     BrowserStorageHostComponent, 
+    CookieDemoHostComponent 
   ],
   imports: [
     BrowserModule,

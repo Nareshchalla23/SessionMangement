@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Cookie Demo (Host)</h2>
+    <div class="form-group">
+      <label for="cookieInput">Enter a value to save as a cookie:</label>
+      <input type="text" id="cookieInput" class="form-control" [value]="cookieValue" (input)="onInputChange($event)" placeholder="Enter value">
+    </div>
+    <button class="btn btn-primary mt-2" (click)="saveCookie()">Save Cookie</button>
+  
+    <div class="mt-4">
+      <h3>All Cookies:</h3>
+      <ul class="list-group">
+        <li *ngFor="let cookie of allCookies" class="list-group-item d-flex justify-content-between align-items-center">
+          {{ cookie.name }}: {{ cookie.value }}
+          <button class="btn btn-danger btn-sm" (click)="deleteCookie(cookie.name)">Delete</button>
+        </li>
+      </ul>
+      <p *ngIf="allCookies.length === 0">No cookies saved yet.</p>
+    </div>
+  </div>
+  
