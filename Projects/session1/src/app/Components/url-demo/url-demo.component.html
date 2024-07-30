@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>URL Parameter Demo</h1>
+  <div class="input-container">
+    <input 
+      type="text" 
+      [value]="tempInputValue" 
+      (input)="updateTempValue($any($event.target).value)"
+      placeholder="Enter a value"
+    >
+    <button (click)="saveUrlParam()">Send to Session2</button>
+  </div>
+  <p>Current URL Parameter: {{ inputValue }}</p>
+</div>

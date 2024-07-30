@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Browser Session Storage Demo</h2>
+  <div class="form-group">
+    <label for="storageInput">Enter a value to store:</label>
+    <input type="text" id="storageInput" class="form-control" [value]="inputValue" (input)="onInputChange($event)" placeholder="Enter value">
+  </div>
+  <button class="btn btn-primary mt-2" (click)="saveToSessionStorage()">Save to Session Storage</button>
+  <button class="btn btn-secondary mt-2 ml-2" (click)="clearSessionStorage()">Clear Session Storage</button>
+
+  <div class="mt-4">
+    <h3>Stored Value:</h3>
+    <p>{{ storedValue || 'No value stored in session' }}</p>
+  </div>
+
+  <div class="mt-4">
+    <h3>Send to Remote Application:</h3>
+    <button class="btn btn-success" [disabled]="!storedValue" routerLink="/session2/browser-storage">
+      Send to Remote App
+    </button>
+  </div>
+</div>

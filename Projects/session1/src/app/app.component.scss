@@ -1,0 +1,43 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.nav-list li {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+  background-color: #e0e0e0;
+}
+
+.content {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+}
