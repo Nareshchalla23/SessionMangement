@@ -11,7 +11,7 @@ import { Router, NavigationEnd, NavigationError, NavigationCancel, NavigationSta
   declarations: [
     AppComponent, 
     UrlDemoComponent,
-    BrowserStorageHostComponent 
+    BrowserStorageHostComponent, 
   ],
   imports: [
     BrowserModule,
